@@ -1,6 +1,7 @@
 background: '#c0cdff'
 configurate_methods:
 - predefined-model
+- customizable-model
 description:
   en_US: Models provided by deepseek, such as deepseek-reasoner、deepseek-chat、deepseek-coder.
   zh_Hans: 深度求索提供的模型，例如 deepseek-reasoner、deepseek-chat、deepseek-coder 。
@@ -22,6 +23,23 @@ icon_small:
 label:
   en_US: deepseek
   zh_Hans: 深度求索
+model_credential_schema:
+  credential_form_schemas:
+  - label:
+      en_US: API Key
+    placeholder:
+      en_US: Enter your API Key
+      zh_Hans: 在此输入您的 API Key
+    required: true
+    type: secret-input
+    variable: api_key
+  model:
+    label:
+      en_US: Model Name
+      zh_Hans: 模型名称
+    placeholder:
+      en_US: Enter your model name
+      zh_Hans: 输入模型名称
 models:
   llm:
     position: models/llm/_position.yaml
